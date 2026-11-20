@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#153c47"><title>PORT SOLANA — Marina's city</title>
+<link rel="stylesheet" href="./src/style.css">
+<script type="importmap">{"imports":{"three":"./vendor/three/three.module.min.js"}}</script>
+</head><body>
+<div id="world"></div>
+<div id="hud" hidden>
+  <div class="district"><b>PORT SOLANA</b><span>BAHÍA AVENUE / FREE ROAM</span></div>
+  <div class="status"><div id="wanted" aria-label="No wanted level">☆ ☆ ☆ ☆ ☆</div><div id="cash">$250</div><div class="health"><i id="health"></i></div><small>MARINA VALE</small></div>
+  <div class="map-panel"><canvas id="minimap" width="240" height="240" aria-label="City minimap"></canvas><div>N ↑ <span>PORT SOLANA</span></div></div>
+  <div id="mission"><small>THE CITY IS YOURS</small><span>Explore the waterfront. Find a ride. Make your own way.</span></div>
+  <div id="prompt" hidden></div><div id="speed" hidden></div>
+  <div id="crosshair" aria-hidden="true">+</div><div id="mute">M · SOUND ON</div>
+  <div id="notice" role="status" hidden><b></b><span></span></div>
+  <div class="help">WASD <span>move / drive</span> &nbsp; SHIFT <span>sprint</span> &nbsp; E <span>enter / exit</span> &nbsp; CLICK / F <span>fire</span> &nbsp; M <span>mute</span> &nbsp; ESC <span>pause</span></div>
+</div>
+<section id="menu"><div class="menu-card">
+  <div class="eyebrow">A CITY OF SECOND CHANCES</div><h1>PORT<br><em>SOLANA</em><span>✦</span></h1>
+  <p class="subtitle">Sun on the water. Trouble on the horizon.</p>
+  <p class="story">Marina Vale. Courier. New arrival.<br>One borrowed tomorrow in a city that never asks why.<br><strong>Dario Venn’s first call:</strong> Drive to the marina pier<br>and collect a sealed package.</p>
+  <div class="buttons"><button id="start">New game</button><button id="continue">Continue</button><button id="replay">Replay story</button></div><p id="save-note"></p>
+  <div class="controls"><span><b>W A S D</b> Move / drive</span><span><b>SHIFT</b> Sprint</span><span><b>E</b> Enter / exit car</span><span><b>RIGHT DRAG / ← →</b> Look</span><span><b>MOUSE / F</b> Shoot forward</span><span><b>SPACE</b> Brake</span><span><b>M</b> Mute sound</span><span><b>ESC</b> Pause</span></div>
+  <footer>ROUND 03 &nbsp; / &nbsp; DARIO'S FIVE RUNS <span>OFFLINE EDITION</span></footer>
+</div><div class="location-tag">26° SOUTH OF ORDINARY<br><strong>WELCOME TO THE WATERFRONT</strong></div></section>
+<section id="pause" hidden><div><small>TAKE A BREATHER</small><h2>City on hold.</h2><button id="resume">Back to the streets</button><button id="save">Save &amp; return to menu</button><p>Esc to resume · progress saves on your device</p></div></section>
+<section id="recovery" hidden role="status"><div><small id="recovery-kind"></small><h2 id="recovery-title"></h2><p id="recovery-detail"></p></div></section>
+<div id="error" hidden></div><script type="module" src="./src/main.js"></script>
+</body></html>
